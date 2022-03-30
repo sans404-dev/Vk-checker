@@ -1,2 +1,2 @@
 # Vk-checker
-Vk checker telegram bot powered by aiogram
+Simple Vk checker telegram bot powered by aiogram
