@@ -6,7 +6,7 @@ from vk_api.exceptions import BadPassword
 import json, requests
 from os import remove
 
-TOKEN = "5267870594:AAGJGt6_0sCiMT5kkLV00YYmuypkH5HwAyk"
+TOKEN = ""
 bot = Bot(TOKEN)
 dp = Dispatcher(bot)
 
