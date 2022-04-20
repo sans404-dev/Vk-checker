@@ -31,17 +31,7 @@ async def get_data(message: types.Message):
     except BadPassword:
         await message.reply("Невалид❌")
     else:
-        info = vk.users.get()
-        with open("vk_config.v2.json", "r") as data_file:
-            data = json.load(data_file)
-            for xxx in data[login]["token"].keys():
-                for yyy in data[login]["token"][xxx].keys():
-                    access_token = data[login]["token"][xxx][yyy]["access_token"]
         await message.reply("Валид✅")
-        await message.reply(
-            f"Имя аккаунта: {User[0]['first_name']} {User[0]['last_name']}\nID страницы: {User[0]['id']}\nТокен: {access_token}"
-        )
-        remove("vk_config.v2.json")
 
 
 if __name__ == "__main__":
