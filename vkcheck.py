@@ -24,8 +24,8 @@ async def get_data(message: types.Message):
         password = raw_data.split(":")[1]
     except IndexError:
         await message.reply("Введите логин:пароль от вконтакте для проверки!")
-    vk_session = VkApi(f"{phone}", "{password}")
     try:
+    vk_session = VkApi(f"{phone}", "{password}")
         vk_session.auth()
         vk = VK.get_api()
     except BadPassword:
